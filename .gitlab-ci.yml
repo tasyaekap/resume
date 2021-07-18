@@ -1,0 +1,13 @@
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+  - pwd
+  - ls -liah
+  artifacts:
+    paths:
+    - public
+    expire_in: 1 day
+  only:
+  - master
